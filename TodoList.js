@@ -2,10 +2,7 @@ const { TodoItem } = window.App;
 
 class TodoList extends React.Component {
     render() {
-        // 當待辦項目被刪除，觸發上層元件(TodoApp) 傳遞的 onDeleteTodo callback：
-        //      callback 必須傳遞 todo 的 id，讓上層元件知道哪一筆項目需要刪除；
-        // 使用 props 傳遞 callback 的好處是，可以不用在底層 view 元件中加入業務邏輯
-        // 筆記：讓view元件職責簡單，只需顯示 props 的資料，和呼叫 props 中相對應的 callback
+
         const {
             todos,
             onUpdateTodo,
@@ -23,6 +20,8 @@ class TodoList extends React.Component {
                     onUpdate={(content) => onUpdateTodo && onUpdateTodo(todo.id, content)}
                     onToggle={(completed) => onToggleTodo && onToggleTodo(todo.id, completed)}
                     onDelete={() => onDeleteTodo && onDeleteTodo(todo.id)}
+                    // 使用 props 傳遞 callback 的好處是，可以不用在底層 view 元件中加入業務邏輯
+                    // 筆記：讓view元件職責簡單，只需顯示 props 的資料，和呼叫 props 中相對應的 callback
                 />
             </li>
         ));
