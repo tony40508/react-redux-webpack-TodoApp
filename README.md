@@ -1,5 +1,5 @@
 # React-TodoApp
-> React Practice: TodoApp <br>
+> :octocat: React Practice: TodoApp <br>
 > * React v15.0.1 <br>
 > * fetch v1.0.0 <br>
 > * babel-core v5.8.34
