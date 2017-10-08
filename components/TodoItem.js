@@ -19,9 +19,7 @@ class TodoItem extends React.Component {
             onToggle,
             onDelete
         } = this.props;
-        
         // && onDelete()為確保上層元件是否有傳function過來
-
         return (
             <div>
                 <input
