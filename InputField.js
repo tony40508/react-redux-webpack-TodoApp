@@ -29,6 +29,9 @@ class InputField extends React.Component {
                 break;
         }
         // 如果上層元件傳遞 onKeyDown callback，則必須觸發它
+        // 因為在 InputField 元件中需要知道使用者是否按下 Enter，所以 onKeyDown 用 handleKeyDown 接走了，
+        // 但是在 TodoItem 元件中的 renderEditMode 我們需要知道使用者是否有按下 ESC 來切換模式，
+        // 所以遞了 onKeyDown 的 prop 給 InputField
         onKeyDown && onKeyDown(e);
     }
 
