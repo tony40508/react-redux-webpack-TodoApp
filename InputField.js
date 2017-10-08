@@ -37,8 +37,11 @@ class InputField extends React.Component {
         const { onSubmitEditing, ...inputProps } = this.props; 
         return (
             // 當表單元件為「可控元件」，元件內部不會儲存狀態，因此必須透過 props 傳遞 value，
+            // 自己控制 value（放在 state，透過 props 遞進來），所以不依賴 HTML 表單元件來幫我們管理值，
             // 明確指定表單元件的資料為何（所以當你將 value 指定為一串字串，則無論使用者鍵入什麼值，元件都不會起反應）
-            // 當表單元件為「不可控元件」，元件內部會儲存狀態，因此你無法讓應用程式的資料連動影響不可控元件中的狀態
+            
+            // 當表單元件為「不可控元件」，元件內部會儲存狀態，因此你無法讓應用程式的資料連動影響不可控元件中的狀態，
+            // 依賴 HTML 表單元件來幫我管理值，所以我們透過 default value 把起始值傳遞給它。
             <input
                 {...this.props}
                 type="text"
