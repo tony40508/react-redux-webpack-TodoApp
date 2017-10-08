@@ -8,5 +8,5 @@
 * [React v15.5.4 propTypes issues](https://github.com/reactjs/prop-types)
 * Component lifecycle note 
 ![](https://imgur.com/jUjWoQ8.png)
->>>>>>> 6bb22d9f719663f1cb62090406cef7536049cb93
+
 
